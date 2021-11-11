@@ -8,32 +8,49 @@ function popuppreview() {
     let birthDate=document.getElementById('birthdate').value;
     let birthShow=document.getElementById('birthPreview');
     birthShow.innerHTML=birthDate;
-    console.log(birthDate)
+    console.log(birthDate);
 
 
     let phoneNum=document.getElementById('phonenum').value;
     let phoneShow=document.getElementById('phonePreview');
     phoneShow.innerHTML=phoneNum;
-    console.log(phoneNum)
+    console.log(phoneNum);
 
 
+    // let gender1=document.getElementById('female').value;
+    // if (gender1 == "female") {
+    //     let genderShow=document.getElementById('genderPreview');
+    //     genderShow.innerHTML=gender1;
+    //     console.log(genderShow);
+    // }
 
-    let genderValue1=document.getElementById('female').value;
-    if(genderValue1 == "female"){
-        let genderShow=document.getElementById('genderPreview');
-        genderShow.innerHTML='Female';
-        console.log(genderValue1)
+
+    // let gender2=document.getElementById('male').value;
+    // if (gender2 == "male") {
+    //     let genderShow=document.getElementById('genderPreview');
+    //     genderShow.innerHTML=gender1;
+    //     console.log(genderShow);
+    // }
+
+
+    let gender1=document.getElementById('female');
+    let gender2=document.getElementById('male');
+    // let resultGender="";
+    if (gender1.checked == true) {
+        let genderPreview = document.getElementById('female').value;
+        resultGender=genderPreview
+        document.getElementById('genderPreview').innerHTML=resultGender
+        console.log(genderPreview)
+    }
+    else if (gender2.checked == true) {
+        let genderPreview = document.getElementById('male').value;
+        resultGender=genderPreview
+        document.getElementById('genderPreview').innerHTML=resultGender
+        console.log(genderPreview)
     }
 
-    let genderValue2=document.getElementById('male').value;
-    if(genderValue2 == 'male'){
-        let genderShow=document.getElementById('genderPreview');
-        genderShow.innerHTML='Male';
-        console.log(genderValue2)
 
-    }
     
-
 
     let educationValue = document.getElementById('education').value;
     if(educationValue == "diploma") {
@@ -57,6 +74,39 @@ function popuppreview() {
         console.log('PhD')
     }
 
+
+
+    let tech = document.getElementById('tech');
+    let art = document.getElementById('art');
+    let sales = document.getElementById('sales');
+    let marketing = document.getElementById('marketing');
+
+    var result="";
+    if (tech.checked == true) {
+        let techPreview = document.getElementById('tech').value;
+        result=techPreview;
+        document.getElementById('result').innerHTML=result;
+        console.log(result);
+    }
+    else if(art.checked == true) {
+        let artPreview = document.getElementById('art').value;
+        result= result +''+ artPreview;
+        document.getElementById('result').innerHTML=result;
+        console.log(result);
+    }
+    else if(sales.checked == true) {
+        let salesPreview = document.getElementById('sales').value;
+        result=result +''+ salesPreview
+        document.getElementById('result').innerHTML=result;
+        console.log(result);
+    }
+    else if(marketing.checked == true) {
+        let marketingPreview = document.getElementById('marketing').value;
+        resultresult=result +''+ marketingPreview;
+        document.getElementById('result').innerHTML=result;
+        console.log(result);
+    }
+    
 
 }
 
