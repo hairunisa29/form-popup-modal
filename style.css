@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap");
 
 
+
 body{
     background-color: #89CFF0;
 }
@@ -11,7 +12,7 @@ body{
     border-radius: 15px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     font-family:"Quicksand",sans-serif;
-    font-size: 15px;
+    font-size: 15px
 }
 
 .card-title{
@@ -29,3 +30,36 @@ body{
 }
 
 
+.modal-header{
+    padding-left:20px;
+    padding-top:5px;
+    padding-bottom:10px;
+}
+
+.modal-content{
+  background-color: rgb(46, 47, 88);
+
+  border-radius: 5px;
+  box-shadow: 0px 10px 20px -10px rgba(0,0,0,0.75);
+  color: #ffff;
+  padding-top: 10px;
+  position: relative;
+  width: 350px;
+  max-width: 100%;
+  text-align: center;
+}
+
+.profile-img{
+    border-radius: 100px;
+}
+
+.name-container{
+    align-items: center;
+    margin:5px;
+}
+
+#birthPreview{
+    margin:5px;
+    font-size: 10px;
+    font-weight: bold;
+}

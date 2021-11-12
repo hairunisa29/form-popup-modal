@@ -17,21 +17,10 @@ function popuppreview() {
     console.log(phoneNum);
 
 
-    // let gender1=document.getElementById('female').value;
-    // if (gender1 == "female") {
-    //     let genderShow=document.getElementById('genderPreview');
-    //     genderShow.innerHTML=gender1;
-    //     console.log(genderShow);
-    // }
-
-
-    // let gender2=document.getElementById('male').value;
-    // if (gender2 == "male") {
-    //     let genderShow=document.getElementById('genderPreview');
-    //     genderShow.innerHTML=gender1;
-    //     console.log(genderShow);
-    // }
-
+    let address=document.getElementById('address').value;
+    let addressShow=document.getElementById('addressPreview');
+    addressShow.innerHTML=address;
+    console.log(address);
 
     let gender1=document.getElementById('female');
     let gender2=document.getElementById('male');
@@ -48,6 +37,8 @@ function popuppreview() {
         document.getElementById('genderPreview').innerHTML=resultGender
         console.log(genderPreview)
     }
+
+
 
 
     
@@ -81,31 +72,136 @@ function popuppreview() {
     let sales = document.getElementById('sales');
     let marketing = document.getElementById('marketing');
 
-    var result="";
-    if (tech.checked == true) {
-        let techPreview = document.getElementById('tech').value;
-        result=techPreview;
-        document.getElementById('result').innerHTML=result;
-        console.log(result);
+    let techValue = tech.value;
+    let artValue = art.value;
+    let salesValue = sales.value;
+    let marketingValue = marketing.value;
+
+    let interest=document.getElementById('interestPreview');
+
+
+    if (tech.checked == true && art.checked == false && sales.checked == false && marketing.checked == false) {
+        interestShow=techValue;
+        interest.innerHTML=interestShow;
+        console.log(interestShow);
     }
-    else if(art.checked == true) {
-        let artPreview = document.getElementById('art').value;
-        result= result +''+ artPreview;
-        document.getElementById('result').innerHTML=result;
-        console.log(result);
+
+    else if (tech.checked == false && art.checked == true && sales.checked == false && marketing.checked == false) {
+        interestShow=artValue;
+        interest.innerHTML=interestShow;
+        console.log(interestShow);
     }
-    else if(sales.checked == true) {
-        let salesPreview = document.getElementById('sales').value;
-        result=result +''+ salesPreview
-        document.getElementById('result').innerHTML=result;
-        console.log(result);
+
+    else if (tech.checked == false && art.checked == true && sales.checked == false && marketing.checked == false) {
+        interestShow=artValue;
+        interest.innerHTML=interestShow;
+        console.log(interestShow);
     }
-    else if(marketing.checked == true) {
-        let marketingPreview = document.getElementById('marketing').value;
-        resultresult=result +''+ marketingPreview;
-        document.getElementById('result').innerHTML=result;
-        console.log(result);
+
+    else if (tech.checked == false && art.checked == false && sales.checked == true && marketing.checked == false) {
+        interestShow=salesValue;
+        interest.innerHTML=interestShow;
+        console.log(interestShow);
     }
+
+    else if (tech.checked == false && art.checked == false && sales.checked == false && marketing.checked == true) {
+        interestShow=marketingValue;
+        interest.innerHTML=interestShow;
+        console.log(interestShow);
+    }
+
+    else if (tech.checked == true && art.checked == true && sales.checked == false && marketing.checked == false) {
+        interestShow=techValue + ", " + artValue;
+        interest.innerHTML=interestShow;
+        console.log(interestShow);
+    }
+
+    else if (tech.checked == true && art.checked == false && sales.checked == true && marketing.checked == false) {
+        interestShow=techValue + ", " + salesValue;
+        interest.innerHTML=interestShow;
+        console.log(interestShow);
+    }
+
+    else if (tech.checked == true && art.checked == false && sales.checked == false && marketing.checked == true) {
+        interestShow=techValue + ", " + marketingValue;
+        interest.innerHTML=interestShow;
+        console.log(interestShow);
+    }
+
+    else if (tech.checked == false && art.checked == true && sales.checked == true && marketing.checked == false) {
+        interestShow=artValue + ", " + salesValue;
+        interest.innerHTML=interestShow;
+        console.log(interestShow);
+    }
+
+    else if (tech.checked == false && art.checked == true && sales.checked == false && marketing.checked == true) {
+        interestShow=artValue + ", " + marketingValue;
+        interest.innerHTML=interestShow;
+        console.log(interestShow);
+    }
+
+    else if (tech.checked == false && art.checked == false && sales.checked == true && marketing.checked == true) {
+        interestShow=salesValue + ", " + marketingValue;
+        interest.innerHTML=interestShow;
+        console.log(interestShow);
+    }
+
+    else if (tech.checked == true && art.checked == true && sales.checked == true && marketing.checked == false) {
+        interestShow=techValue + ", " + artValue + ", " + salesValue;
+        interest.innerHTML=interestShow;
+        console.log(interestShow);
+    }
+
+    else if (tech.checked == false && art.checked == true && sales.checked == true && marketing.checked == true) {
+        interestShow=artValue + ", " + salesValue + ", " + marketingValue;
+        interest.innerHTML=interestShow;
+        console.log(interestShow);
+    }
+
+    else if (tech.checked == true && art.checked == false && sales.checked == true && marketing.checked == true) {
+        interestShow=techValue + ", " + salesValue + ", " + marketingValue;
+        interest.innerHTML=interestShow;
+        console.log(interestShow);
+    }
+
+    else if (tech.checked == true && art.checked == true && sales.checked == false && marketing.checked == true) {
+        interestShow=techValue + ", " + artValue + ", " + marketingValue;
+        interest.innerHTML=interestShow;
+        console.log(interestShow);
+    }
+
+    else if (tech.checked == true && art.checked == true && sales.checked == true && marketing.checked == true) {
+        interestShow=techValue + ", " + artValue + ", " + salesValue + ", " + marketingValue;
+        interest.innerHTML=interestShow;
+        console.log(interestShow);
+    }
+
+    else {
+        interestShow="You haven't choose any interest";
+        interest.innerHTML=interestShow;
+        console.log(interestShow);
+    }
+
+
+
+    // else if(art.checked == true) {
+    //     let artPreview = document.getElementById('art').value;
+    //     result= result +''+ artPreview;
+    //     document.getElementById('result').innerHTML=result;
+    //     console.log(result);
+    // }
+    // else if(sales.checked == true) {
+    //     let salesPreview = document.getElementById('sales').value;
+    //     result=result +''+ salesPreview
+    //     document.getElementById('result').innerHTML=result;
+    //     console.log(result);
+    // }
+    // else if(marketing.checked == true) {
+    //     let marketingPreview = document.getElementById('marketing').value;
+    //     resultresult=result +''+ marketingPreview;
+    //     document.getElementById('result').innerHTML=result;
+    //     console.log(result);
+    // }
     
 
 }
